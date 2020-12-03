@@ -6,7 +6,6 @@ const _ = require("lodash");
 const mongoose = require("mongoose");
 var validator = require("email-validator");
 var nodemailer = require('nodemailer');
-const port = 3000;
 
 mongoose.connect("mongodb+srv://bhuvanesh-admin:xyz123@456@website.ckfrs.mongodb.net/Hotels", {useNewUrlParser: true});
 const app = express();
@@ -206,7 +205,10 @@ app.post('/contact', (req, res) => {
     }
   });
 
-
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
