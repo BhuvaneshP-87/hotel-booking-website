@@ -6,14 +6,14 @@ pipeline{
         stage('Compile Stage'){
             steps{
                 sh 'npm install'
-                // sh 'npm i package.json'
-                // sh 'nodemon app.js'
+                sh 'npm i package.json'
+                sh 'node app.js'
             }
         }
 
         stage('Testing'){
             steps{
-                sh 'npm test'
+                sh 'node test'
             }
         }
     }
