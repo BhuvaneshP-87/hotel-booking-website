@@ -7,14 +7,21 @@ pipeline{
             steps{
                 bat 'npm install'
                 bat 'npm i package.json'
-                bat 'node app.js'
             }
         }
 
         stage('Testing'){
             steps{
-                bat 'node test'
+                bat 'npm test'
             }
         }
+
+        stage('Deploying'){
+            steps{
+                bat 'git push heroku master'
+            }
+        }
+
+
     }
 }
