@@ -12,14 +12,14 @@ pipeline{
 
         stage('Testing'){
             steps{
-                parallel{
+                parallel(
                     a:{
                         bat 'node app.js'
-                    }
+                    },
                     b:{
                         bat 'npm test'
                     }
-                }
+                )
             }
         }
 
