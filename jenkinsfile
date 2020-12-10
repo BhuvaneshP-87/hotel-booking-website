@@ -7,7 +7,6 @@ pipeline{
             steps{
                 bat 'npm install'
                 bat 'npm i package.json'
-                bat 'node app.js'
             }
         }
 
