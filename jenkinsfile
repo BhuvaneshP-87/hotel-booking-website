@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    tools {nodejs "node"}
+    tools {nodejs "Ease-Rooms"}
 
     stages{
         stage('Compile Stage'){
