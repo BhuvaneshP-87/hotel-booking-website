@@ -5,15 +5,15 @@ pipeline{
     stages{
         stage('Compile Stage'){
             steps{
-                sh 'npm install'
-                sh 'npm i package.json'
-                sh 'node app.js'
+                bat 'npm install'
+                bat 'npm i package.json'
+                bat 'node app.js'
             }
         }
 
         stage('Testing'){
             steps{
-                sh 'node test'
+                bat 'node test'
             }
         }
     }
