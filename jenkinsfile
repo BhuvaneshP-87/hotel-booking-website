@@ -6,8 +6,8 @@ pipeline{
         stage('Compile Stage'){
             steps{
                 sh 'npm install'
-                sh 'npm i package.json'
-                sh 'nodemon app.js'
+                // sh 'npm i package.json'
+                // sh 'nodemon app.js'
             }
         }
 
