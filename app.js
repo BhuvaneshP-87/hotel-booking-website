@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 var validator = require("email-validator");
 var nodemailer = require('nodemailer');
 
-mongoose.connect("mongodb+srv://bhuvanesh-admin:xyz123@456@website.ckfrs.mongodb.net/Hotels", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://bhuvanesh-admin:xyz123@456@website.ckfrs.mongodb.net/Hotels", {useNewUrlParser: true,useUnifiedTopology: true});
 const app = express();
 app.use(bodyParser.urlencoded({extended : true}));
 app.set("view engine",'ejs');
