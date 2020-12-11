@@ -31,6 +31,7 @@ pipeline{
                 // bat 'git push heroku master'
                 bat 'npm install -g heroku'
                 bat 'heroku login'
+                bat 'k'
                 bat 'heroku git:clone -a cryptic-castle-55044'
                 bat 'cd cryptic-castle-55044'
                 bat 'git add .'
