@@ -28,7 +28,7 @@ pipeline{
 
         stage('Deploying'){
             steps{
-                bat 'git push heroku master'
+                // bat 'git push heroku master'
                 bat 'npm install -g heroku'
                 bat 'heroku login'
                 bat 'heroku git:clone -a cryptic-castle-55044'
