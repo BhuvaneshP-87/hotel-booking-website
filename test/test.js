@@ -7,11 +7,12 @@ var server= require('../app.js');
 let chaiHttp = require('chai-http');
 
 chai.use(chaiHttp);
+const chaiAppServer = chai.request(server).keepOpen();
 
 describe("Routing Testing", () => {
 
     it('Main page status', function(done) {
-        chai.request(server)
+        chaiAppServer
             .get('/')
             .end((error, response)=>{
             response.should.have.status(200);
@@ -20,7 +21,7 @@ describe("Routing Testing", () => {
     });
     
     it('About page status', function(done) {
-        chai.request(server)
+        chaiAppServer
             .get('/about')
             .end((error, response)=>{
             response.should.have.status(200);
@@ -29,7 +30,7 @@ describe("Routing Testing", () => {
     });
 
     it('Contact page status', function(done) {
-        chai.request(server)
+        chaiAppServer
             .get('/contact')
             .end((error, response)=>{
             response.should.have.status(200);
@@ -38,7 +39,7 @@ describe("Routing Testing", () => {
     });
 
     it('Hotels Page status', function(done) {
-        chai.request(server)
+        chaiAppServer
             .get('/mumbai/hotels')
             .end((error, response)=>{
             response.should.have.status(200);
@@ -47,7 +48,7 @@ describe("Routing Testing", () => {
     });
 
     it('Thank you page status', function(done) {
-        chai.request(server)
+        chaiAppServer
             .get('/contact/thankyou')
             .end((error, response)=>{
             response.should.have.status(200);
