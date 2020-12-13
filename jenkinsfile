@@ -10,36 +10,20 @@ pipeline{
             }
         }
 
-        // stage('Testing'){
-        //         options {
-        //             timeout(time: 20, unit: 'SECONDS') 
-        //         }
-        //     steps{
-        //         parallel(
-        //             a:{
-        //                 bat 'node app.js'
-        //             },
-        //             b:{
-        //                 bat 'npm test'
-        //             }
-        //         )
-        //     }
-        // }
-
-        stage('Deploying'){
+        stage('Testing'){
+                options {
+                    timeout(time: 20, unit: 'SECONDS') 
+                }
             steps{
-                // bat 'git push heroku master'
-                bat 'npm install -g heroku'
-                bat 'heroku login'
-                bat 'k'
-                bat 'heroku git:clone -a cryptic-castle-55044'
-                bat 'cd cryptic-castle-55044'
-                bat 'git add .'
-                bat 'git commit -am "make it better"'
-                bat 'git push heroku master'
+                parallel(
+                    a:{
+                        bat 'node app.js'
+                    },
+                    b:{
+                        bat 'npm test'
+                    }
+                )
             }
         }
-
-
     }
 }
