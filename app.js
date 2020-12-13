@@ -80,7 +80,6 @@ app.get("/:cityName/hotels", function(req, res){
     if (storedTitle === requestedCity) {
       Hotel.find({city:requestedCity},function(err, foundItems){
         if (foundItems.length != 0){
-          console.log(foundItems);
           res.render("hotels", {
             title: requestedCity,
             hotelList: foundItems
@@ -209,6 +208,6 @@ let port = process.env.PORT;
 if (port == null || port == "") {
     port = 3000;
 }
-app.listen(port, () => {
+module.exports= app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
