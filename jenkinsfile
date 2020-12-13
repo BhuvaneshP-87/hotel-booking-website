@@ -15,14 +15,7 @@ pipeline{
                 //     timeout(time: 20, unit: 'SECONDS') 
                 // }
             steps{
-                parallel(
-                    a:{
-                        bat 'node app.js'
-                    },
-                    b:{
                         bat 'npm test'
-                    }
-                )
             }
         }
     }
