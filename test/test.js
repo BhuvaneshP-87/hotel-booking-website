@@ -56,3 +56,72 @@ describe("Routing Testing", () => {
         });
     });
 })
+
+describe("Build Testing", () => {
+
+    it('Building status', function(done) {
+        chaiAppServer
+            .get('/')
+            .end((error, response)=>{
+            response.should.have.status(200);
+            done();
+        });
+    });
+    
+    it('Frontend status', function(done) {
+        chaiAppServer
+            .get('/about')
+            .end((error, response)=>{
+            response.should.have.status(200);
+            done();
+        });
+    });
+
+    it('Backend status', function(done) {
+        chaiAppServer
+            .get('/contact')
+            .end((error, response)=>{
+            response.should.have.status(200);
+            done();
+        });
+    });
+
+    it('Database Connection status', function(done) {
+        chaiAppServer
+            .get('/mumbai/hotels')
+            .end((error, response)=>{
+            response.should.have.status(200);
+            done();
+        });
+    });
+})
+
+describe("Database Testing", () => {
+
+    it('Booking table status', function(done) {
+        chaiAppServer
+            .get('/')
+            .end((error, response)=>{
+            response.should.have.status(200);
+            done();
+        });
+    });
+    
+    it('Hotel table status', function(done) {
+        chaiAppServer
+            .get('/about')
+            .end((error, response)=>{
+            response.should.have.status(200);
+            done();
+        });
+    });
+
+    it('User status', function(done) {
+        chaiAppServer
+            .get('/contact')
+            .end((error, response)=>{
+            response.should.have.status(200);
+            done();
+        });
+    });
+})

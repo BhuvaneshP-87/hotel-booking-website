@@ -91,6 +91,18 @@ app.get("/:cityName/hotels", function(req, res){
 
 });
 
+app.get("/bookings", function(req, res){
+  // res.render("thankyou_contact");
+  const requestedCity = _.lowerCase(req.params.cityName);
+  Booking.find(function(err, foundItems){
+        if (foundItems.length != 0){
+          res.render("bookings", {
+            bookingList: foundItems
+          });
+        }
+      });
+});
+
 app.get("/hotel/:hotelName", function(req, res){
   const requestedHotel = req.params.hotelName;
   res.render("hotel-details", {
