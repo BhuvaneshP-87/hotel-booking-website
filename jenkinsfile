@@ -3,7 +3,11 @@ pipeline{
     tools {nodejs "Ease-Rooms"}
 
     stages{
-        stage('Compile Stage'){
+            stage('Build'){
+            steps{
+            }
+        }
+        stage('Compile'){
             steps{
                 bat 'npm install'
                 bat 'npm i package.json'
@@ -13,6 +17,10 @@ pipeline{
         stage('Testing'){
             steps{
                         bat 'npm test'
+            }
+        }
+        stage('Deployment'){
+            steps{
             }
         }
     }
