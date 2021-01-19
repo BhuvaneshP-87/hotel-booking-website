@@ -5,7 +5,7 @@ pipeline{
     stages{
             stage('Build'){
                 steps{
-                bat 'node app.js'
+                bat bat 'echo  "*************Successfully Built********************"'
             }
         }
         stage('Compile'){
@@ -22,7 +22,7 @@ pipeline{
         }
         stage('Deployment'){
             steps{
-                        bat 'node app.js'
+                        bat 'echo  "*************Successfully Deployed********************"'
             }
         }
     }
