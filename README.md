@@ -1,10 +1,10 @@
 # Ease Rooms
 
 ###  A Hotel Booking 
-Ease Rooms, as the name says we make booking the easiest. We have introduced this new scheme, ‘Walk-in Booking’. No payment required, just visit our website and make your booking. 
-Our scheme is fully based on customer’s trust, we believe in their standards. In return, we will give our best with our services.  
+Ease Rooms, as the name says we make booking the easiest. We have introduced this new scheme, â€˜Walk-in Bookingâ€™. No payment required, just visit our website and make your booking. 
+Our scheme is fully based on customerâ€™s trust, we believe in their standards. In return, we will give our best with our services.  
  *The idea presented by us, is fully for educational purpose. We had no business motive while developing this project, as there are better ideas in the market.*  
- https://cryptic-castle-55044.herokuapp.com/
+
  
 - [x] Frontend
 - [x] Beautifying the app
@@ -14,9 +14,9 @@ Our scheme is fully based on customer’s trust, we believe in their standards. In
 - [x] Deployment on heroku
 - [x] Version 2
 - [x] Writing test cases
-- [ ] Writing code for pipeline
-- [ ] Testing CI/CD 
-- [ ] Version 3
+- [x] Writing code for pipeline
+- [x] Testing CI/CD 
+- [x] Version 3
 
 
 ### Technologies Used
